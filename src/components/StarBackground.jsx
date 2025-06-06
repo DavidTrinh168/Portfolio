@@ -48,7 +48,7 @@ export const StarBackground = () => {
                 id: i,
                 x: Math.random() * 100,
                 y: Math.random() * 20,
-                size: Math.random() * 2 + 1, // Size between 1px and 3px
+                size: Math.random() * 0.25 + 0.5, // Size between 0.25px and 0.5px
                 delay: Math.random() * 5, // Delay before animation starts
                 animationDuration: Math.random() * 3 + 2, // Animation duration between 2s and 5s
             });
