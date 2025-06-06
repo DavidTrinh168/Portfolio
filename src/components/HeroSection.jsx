@@ -1,13 +1,42 @@
+import { ArrowDown } from "lucide-react";
+
+const heroContent = {
+    firstName: "David",
+    lastName: "Trịnh",
+    introducing: "Hi, I'm ",
+    description:
+        "I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.",
+    button: "About Me",
+};
 export const HeroSection = () => {
-    return(
-        <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-            <div className="text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Website</h1>
-                <p className="text-lg md:text-xl mb-8">Explore our features and services</p>
-                <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-                    Get Started
-                </button>
+    return (
+        <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4">
+            <div className="container max-w-4xl mx-auto text-center z-10">
+                <div className="space-y-6">
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                        <span className="opacity-0 animate-fade-in"> {heroContent.introducing}</span>
+                        <span className="text-primary opacity-0 animate-fade-in-delay-1">{heroContent.firstName}</span>
+                        <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+                            {heroContent.lastName}
+                        </span>
+                    </h1>
+
+                    <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+                        {heroContent.description}
+                    </p>
+
+                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                        <a href="#about" className="cosmic-button">
+                            {heroContent.button}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+                <span  className="text-sm text-muted-foreground mb-2">Scroll</span>
+                <ArrowDown  className="h-5 w-5 text-primary" />
             </div>
         </section>
-    )
-}
+    );
+};

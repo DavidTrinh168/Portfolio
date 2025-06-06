@@ -3,12 +3,12 @@ import { classNames } from "../libs/utils";
 import { MenuIcon, X } from "lucide-react";
 
 const navbarItems = [
-    { name: "Home", href: "/" },
-    { name: "About Me", href: "/about" },
-    { name: "Skills", href: "/skills" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
-    // { name: "Blog", href: "/blog" },
+    { name: "Home", href: "#" },
+    { name: "About Me", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+    // { name: "Blog", href: "#blog" },
 ];
 
 const navHeadingData = {
