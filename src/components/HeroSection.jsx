@@ -7,7 +7,7 @@ const heroContent = {
     lastName: "Trịnh",
     introducing: "Hi, I'm ",
     description:
-        "I create stellar web experiences with modern technologies. Specializing in front-end development, I build interfaces that are both beautiful and functional.",
+        "I'm a Web Developer with extensive experience for over 5 years. My expertise is to create and Websites design, graphic design and many more...",
     button: "About Me",
 };
 export const HeroSection = () => {

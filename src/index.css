@@ -106,6 +106,32 @@
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  .about-img img {
+    border-radius: 0px;
+    border: 10px solid var(--color-primary);
+    padding: 8px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .pro-title{
+    font-weight: bold;
+    position: relative;
+    width: 128px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .pro-title::after{
+    position: absolute;
+    content: ':';
+    color: #fff;
+    font-size: 14px;
+    left: 88px;
+  }
+
+  
 }
 
 @utility container {
