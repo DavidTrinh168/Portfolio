@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { classNames } from "../libs/utils";
 import { MenuIcon, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navbarItems = [
     { name: "Home", href: "#" },
@@ -33,7 +34,7 @@ export const Navbar = () => {
         <nav
             className={classNames(
                 "fixed w-full z-40 transition-all duration-300",
-                isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+                isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-3"
             )}
         >
             <div className="container flex items-center justify-between">
@@ -58,10 +59,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* Mobile menu button */}
-                <button
-                    onClick={() => setIsMenuOpen((prev) => !prev)}
-                    className="md:hidden p-1 text-foreground z-50"
-                >
+                <button onClick={() => setIsMenuOpen((prev) => !prev)} className="md:hidden p-1 text-foreground z-50">
                     {isMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}{" "}
                 </button>
 
@@ -86,6 +84,8 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
+            {/* Theme Toggle */}
+            <ThemeToggle />
         </nav>
     );
 };
